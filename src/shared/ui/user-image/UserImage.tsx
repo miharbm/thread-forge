@@ -14,7 +14,6 @@ export const UserImage = ({
                              className,
                              src,
                              alt = 'image',
-                             fallback,
                              errorFallback,
                               defaultFallbackSize,
                               defaultFallbackStrokeWidth,
@@ -41,6 +40,7 @@ export const UserImage = ({
         setHasError(true);
     };
 
+
     // 1. Состояние ошибки — показываем ту самую Lucide иконку
     if (hasError) {
         return errorFallback ?? (
@@ -53,22 +53,27 @@ export const UserImage = ({
         );
     }
 
-    return (
-        <div className="relative inline-block w-full h-full">
-            {/* 2. Состояние загрузки (Skeleton) */}
-            {isLoading && (fallback ?? (
-                <div className={cn("animate-pulse bg-slate-200 rounded-xl", className)} />
-            ))}
 
-            {/* 3. Само изображение */}
-            <img
-                className={cn(className, isLoading && 'hidden')}
-                src={src}
-                alt={alt}
-                onLoad={handleLoad}
-                onError={handleError}
-                {...otherProps}
-            />
+    return (
+        <div>
+            {isLoading && (
+                <div className={cn(
+                    "animate-pulse flex flex-col items-center justify-center  text-black/50 rounded-xl",
+                    className
+                )}>
+                    <User size={defaultFallbackSize || 20} strokeWidth={defaultFallbackStrokeWidth || 1.5}/>
+                </div>
+            )}
+           <div className="relative block w-full h-full">
+               <img
+                   className={cn(className, isLoading && 'hidden')}
+                   src={src}
+                   alt={alt}
+                   onLoad={handleLoad}
+                   onError={handleError}
+                   {...otherProps}
+               />
+           </div>
         </div>
     );
 };
