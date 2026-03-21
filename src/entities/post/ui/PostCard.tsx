@@ -1,6 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import {timeAgoDate} from "@/shared/lib/time-ago.ts";
 import {Post} from "@/entities/post/model/types.ts";
+import {UserImage} from "@/shared/ui/user-image";
 
 interface PostCardProps {
     post: Post;
@@ -8,12 +9,16 @@ interface PostCardProps {
 
 export const PostCard = ({ post }: PostCardProps) => {
     return (
-        <div className="flex items-start space-x-3">
+        <div className="flex items-start space-x-2">
             {/* Аватар: берем из post.author.avatarUrl */}
-            <img
-                src={post.author.avatarUrl || `https://i.pravatar.cc/32?u=${post.author.id}`}
-                alt={post.author.name}
+            <UserImage
+                src={post.author.avatarUrl}
+                defaultFallbackSize={24}
+                defaultFallbackStrokeWidth={2}
                 className="w-8 h-8 rounded-full mt-1 object-cover"
+                alt={post.author.name}
+                // Если хочешь кастомную ошибку именно тут:
+                // errorFallback={<div className="...">Упс! Картинка съедена котами</div>}
             />
 
             {/* Сообщение */}
@@ -30,7 +35,7 @@ export const PostCard = ({ post }: PostCardProps) => {
                 {"postsCount" in post && post.postsCount !== undefined && (
                     <div className="flex items-center text-sm text-gray-500 mt-1">
                         <MessageCircle className="w-4 h-4 mr-1" />
-                        <span>{post.postsCount}</span>
+                        {/*<span>{post.postsCount}</span>*/}
                     </div>
                 )}
             </div>

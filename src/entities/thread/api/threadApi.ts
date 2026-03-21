@@ -5,7 +5,7 @@ import {threadMap} from "@/entities/thread/lib/thread.map.ts";
 export const threadApi = baseApi.injectEndpoints({
     endpoints: (builder) => ({
         getThreads: builder.query<Thread[], void>({
-            query: () => "/threads",
+            query: () => "/thread-titles",
             transformResponse: (data: ThreadDTO[]) => data.map(threadMap),
             providesTags: ["Threads"],
         }),

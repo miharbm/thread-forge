@@ -1,4 +1,6 @@
 export const timeAgo = (dateStr: string) => {
+    console.log(dateStr)
+
     const date = new Date(dateStr);
     const now = new Date();
     const diff = Math.floor((now.getTime() - date.getTime()) / 1000);
@@ -10,6 +12,7 @@ export const timeAgo = (dateStr: string) => {
 };
 
 export const timeAgoDate = (date: Date) => {
+    console.log(date)
     const now = new Date();
     // Получаем разницу в секундах, используя getTime() у переданного объекта
     const diff = Math.floor((now.getTime() - date.getTime()) / 1000);

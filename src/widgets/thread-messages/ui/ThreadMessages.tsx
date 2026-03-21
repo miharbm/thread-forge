@@ -1,5 +1,7 @@
+import { useGetPostsByThreadQuery } from "@/entities/post/api/postApi.ts";
+import {Link, useNavigate} from "react-router-dom";
+import {ArrowLeft, Send} from "lucide-react";
 import {PostCard} from "@/entities/post/ui/PostCard.tsx";
-import {useGetPostsByThreadQuery} from "@/entities/post/api/postApi.ts";
 
 interface ThreadMessagesProps {
     id: number;
@@ -7,19 +9,93 @@ interface ThreadMessagesProps {
 
 export const ThreadMessages = ({ id }: ThreadMessagesProps) => {
     const { data: thread, isLoading } = useGetPostsByThreadQuery(id, { skip: !id });
+    const navigate = useNavigate();
 
-    if (isLoading) return <div>Loading...</div>;
+    if (isLoading) {
+        return (
+            <div className="flex h-full items-center justify-center text-slate-500">
+                <div className="animate-pulse">Загрузка обсуждения...</div>
+            </div>
+        );
+    }
 
-    // Проверяем наличие thread и массива сообщений
-    if (!thread || !thread.messages.length) {
-        return <div>Нет сообщений</div>;
+    if (!thread) {
+        return (
+            <div className="flex h-full items-center justify-center text-slate-500">
+                Тред не найден
+            </div>
+        );
+    }
+
+    const onClickBack = () => {
+        navigate(-1)
     }
 
     return (
-        <div className="flex-1 overflow-y-auto p-4 space-y-3">
-            {thread.messages.map((post) => (
-                <PostCard key={post.id} post={post} />
-            ))}
+        <div className="relative flex flex-col h-svh bg-slate-50 overflow-hidden md:pb-24">
+
+            {/* Шапка треда */}
+            {/* Добавили shrink-0, чтобы шапка никогда не сжималась при большом количестве контента, и z-10 для тени поверх скролла */}
+            <div className="shrink-0 z-10 bg-white border-b border-slate-200 px-6 py-4 shadow-sm">
+                <div className="flex items-center justify-between">
+                    <button onClick={onClickBack}>
+                        <ArrowLeft />
+                    </button>
+                    <div>
+                        <h1 className="text-md font-bold text-slate-800 leading-tight">
+                            {thread.title}
+                        </h1>
+                        <p className="text-sm text-slate-500 mt-1">
+                            {thread.messagesCount} {getNoun(thread.messagesCount, 'сообщение', 'сообщения', 'сообщений')}
+                        </p>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+
+            {/* Список сообщений */}
+            {/* Убрали лишнюю обертку. Теперь это прямой потомок flex-col, который забирает всё свободное место (flex-1) и скроллится */}
+            <div className="flex-1 p-4 pb-22 space-y-4 custom-scrollbar overflow-y-auto">
+                {thread.messages.length > 0 ? (
+                    thread.messages.map((post) => (
+                        <PostCard key={post.id} post={post} />
+                    ))
+                ) : (
+                    <div className="text-center py-10 text-slate-400 italic">
+                        В этом треде пока нет сообщений. Будьте первым!
+                    </div>
+                )}
+            </div>
+
+            {/* FAB (Кнопка ответа) */}
+            {/* Используем absolute вместо sticky. Так как главный родитель имеет relative, кнопка всегда будет в правом нижнем углу экрана */}
+            <div className="absolute bottom-6 md:bottom-30 right-7 z-50">
+                <Link
+                    to={`/thread/${id}/reply`}
+                    aria-label="Ответить в обсуждение"
+                    className="flex items-center gap-2
+                bg-orange-500/90 hover:bg-orange-500
+                backdrop-blur-sm
+                text-white font-semibold
+                p-4
+                rounded-2xl shadow-xl shadow-orange-200
+                transition-all duration-200 active:scale-95"
+                >
+                    <Send size={24} />
+                </Link>
+            </div>
+
         </div>
     );
 };
+
+// Вспомогательная функция для склонения (можно вынести в utils)
+function getNoun(number: number, one: string, two: string, five: string) {
+    let n = Math.abs(number);
+    n %= 100;
+    if (n >= 5 && n <= 20) return five;
+    n %= 10;
+    if (n === 1) return one;
+    if (n >= 2 && n <= 4) return two;
+    return five;
+}

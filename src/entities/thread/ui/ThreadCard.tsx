@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { MessageCircle, MoreHorizontal } from "lucide-react";
 import {timeAgo} from "@/shared/lib/time-ago.ts";
 import {Thread} from "@/entities/thread/model/types.ts";
+import {UserImage} from "@/shared/ui/user-image";
 
 interface ThreadCardProps {
     thread: Thread;
@@ -12,7 +13,7 @@ export const ThreadCard = ({ thread }:ThreadCardProps) => {
     const navigate = useNavigate();
 
     const goToThread = () => {
-        navigate(`/thread/${thread.id}`);
+        navigate(`/thread/${thread.id}`, {viewTransition: true});
     };
 
     // обработчик клика по иконке "три точки"
@@ -37,12 +38,14 @@ export const ThreadCard = ({ thread }:ThreadCardProps) => {
             {/* Контент */}
             <div className="flex flex-col flex-1">
                 <div className="flex items-center text-sm text-gray-500">
-                    <img
-                        src={thread.avatar || "https://i.pravatar.cc/32?u=" + thread.id}
-                        alt={thread.author}
+                    <UserImage
+                        src={thread.avatar}
                         className="w-6 h-6 rounded-full mr-2"
+                        alt={thread.author}
+                        // Если хочешь кастомную ошибку именно тут:
+                        // errorFallback={<div className="...">Упс! Картинка съедена котами</div>}
                     />
-                    <span className="font-medium">u/{thread.author}</span>
+                    <span className="font-medium">{thread.author}</span>
                     <span className="mx-1">·</span>
                     <span>{timeAgo(thread.createdAt)}</span>
                 </div>

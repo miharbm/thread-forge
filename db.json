@@ -1,59 +1,761 @@
 {
-    "threads": [
-        { "id": 1, "title": "Как выучить React в 2026?", "author": "mike", "createdAt": "2026-03-20", "postsCount": 5 },
-        { "id": 2, "title": "Лучший способ изучить RTK Query", "author": "alex", "createdAt": "2026-03-19", "postsCount": 4 },
-        { "id": 3, "title": "Tailwind vs SCSS — что лучше?", "author": "john", "createdAt": "2026-03-18", "postsCount": 6 },
-        { "id": 4, "title": "Стоит ли учить Redux в 2026?", "author": "sara", "createdAt": "2026-03-18", "postsCount": 3 },
-        { "id": 5, "title": "Лучшие UI библиотеки для React", "author": "tom", "createdAt": "2026-03-17", "postsCount": 4 },
-        { "id": 6, "title": "FSD архитектура — переоценена?", "author": "mike", "createdAt": "2026-03-16", "postsCount": 5 },
-        { "id": 7, "title": "Как подготовиться к собесу по фронтенду", "author": "anna", "createdAt": "2026-03-15", "postsCount": 7 },
-        { "id": 8, "title": "TypeScript — обязателен или нет?", "author": "alex", "createdAt": "2026-03-14", "postsCount": 4 }
+    "authors": [
+        {
+            "avatar": "https://i.pravatar.cc/150?u=98ec2937-0a9f-4f69-8db4-1bf3c8d79eca",
+            "id": "a1f6f689-6551-4b28-a2aa-784c11ead5f1",
+            "name": "Мария Иванов"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=b8db6e3c-9659-4cdd-b0f2-d0a017857a59",
+            "id": "216f99b3-3ccb-45b3-b520-e0db83994f97",
+            "name": "Jamie Новиков"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=5fc181d4-b6bd-4ff8-aa89-b6171eff8ada",
+            "id": "38057f46-4627-4ea5-82ca-ec598219084d",
+            "name": "Елена Davis"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=49d22075-59bb-4c4f-834b-6c35d8693d4b",
+            "id": "ebd31142-3746-4418-bad9-ed86a4438d5c",
+            "name": "Alex Морозов"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=47a35da0-0d20-404e-9442-7d28a99267d6",
+            "id": "f6a7b183-817f-4bda-b77f-b5158a6c1d36",
+            "name": "Alex Davis"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=ed33a042-b0d5-427d-a71b-bc217cc70182",
+            "id": "9f713e4c-1a81-4b40-a864-8bc4c71213a9",
+            "name": "Drew Петров"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=82bcb59c-917b-462e-9336-2ab519a5230c",
+            "id": "b34a0585-732e-440f-9347-106c04924824",
+            "name": "Jordan Davis"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=cd66c2c4-d12e-4ca9-9335-91849e0b0380",
+            "id": "1805471a-f0b7-4d92-bb7d-aeefa500fbd0",
+            "name": "Alex Смирнов"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=159cac8a-17f6-49ce-ad35-8e054420359d",
+            "id": "7809bd60-8ff0-4fe5-af1e-fe98cc5fb37f",
+            "name": "Casey Новиков"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=cc77265e-fa47-4b4e-81b6-057359f9f75e",
+            "id": "93ff1c91-d896-44cf-a065-c59ed6b8b3b0",
+            "name": "Quinn Johnson"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=8ad99fd5-4bf7-487b-82dc-137fd4633f49",
+            "id": "e0fbdbb4-1b63-4f1d-acab-3982071430a7",
+            "name": "Taylor Новиков"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=a4fa7fe3-6131-48c5-b385-21a32d48118d",
+            "id": "c4f2a9df-1d61-4336-bcaf-32971fb4eff6",
+            "name": "Taylor Wilson"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=f7f57016-cdda-4cef-af02-6d82bc471457",
+            "id": "172ac20e-2a77-4f15-9bd2-8fd637a9ab27",
+            "name": "Casey Смирнов"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=29261506-6dba-435d-b558-6b087a96469f",
+            "id": "9965804d-a180-4c30-a3dd-fb2fa4e82c14",
+            "name": "Ольга Попов"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=71282384-469d-49c2-9b52-23113336df35",
+            "id": "b28327d0-ce56-4e2a-8a76-6e2ddbbecc67",
+            "name": "Александр Miller"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=aa9bb440-5b62-44f5-bb94-f91afe77f9a8",
+            "id": "0115f9e9-7897-4fc9-849d-247f5744a642",
+            "name": "Jordan Davis"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=528c4329-2f20-445d-be36-38d694388d4d",
+            "id": "b7ac78a3-f456-46d5-b55c-a38a4020b05c",
+            "name": "Casey Thomas"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=74fbc809-af05-47ac-8d6b-81747788e604",
+            "id": "4dd9ad91-ddbf-441a-8f03-507b07a05c18",
+            "name": "Артём Anderson"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=d8174696-7293-42a9-9f90-b801cf63d994",
+            "id": "289cd062-410f-4176-9a1b-801252d43506",
+            "name": "Дмитрий Brown"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=8ad85408-732a-4492-b6c6-5521836ba14c",
+            "id": "a7291ec5-ec65-441a-b894-ab64f4fb0328",
+            "name": "Иван Морозов"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=fad87fef-12ce-46a3-b1eb-ecfead9ffe9b",
+            "id": "916b5eef-6c38-4603-8686-6298849287c3",
+            "name": "Дмитрий Кузнецов"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=7d60bf0b-34b1-48f5-979a-ee8e2f2f7e7d",
+            "id": "972eee22-9e0e-49b0-8b79-c5cf5796a882",
+            "name": "Михаил Морозов"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=967b8d53-894a-40ae-9735-2acd79c3eacc",
+            "id": "925da17b-eca0-4b13-8023-32ae976113fb",
+            "name": "Jamie Moore"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=9932f05f-fa2f-45c7-a41f-25151aafeb6b",
+            "id": "f7a6b7a4-fd61-44d3-91e6-1fb8b944a785",
+            "name": "Drew Козлов"
+        },
+        {
+            "avatar": "https://i.pravatar.cc/150?u=32b7060d-d2c9-4cb8-bea7-1686b66d5673",
+            "id": "ece2fc36-9642-408e-89a9-800536b79658",
+            "name": "Александр Smith"
+        }
     ],
     "posts": [
-        { "id": 1, "threadId": 1, "author": "alex", "text": "Делай проекты — это лучший способ", "createdAt": "2026-03-20" },
-        { "id": 2, "threadId": 1, "author": "john", "text": "Согласен, теория бесполезна без практики", "createdAt": "2026-03-20" },
-        { "id": 3, "threadId": 1, "author": "sara", "text": "Попробуй сделать клон Reddit", "createdAt": "2026-03-20" },
-        { "id": 4, "threadId": 1, "author": "mike", "text": "Вот как раз делаю", "createdAt": "2026-03-20" },
-        { "id": 5, "threadId": 1, "author": "tom", "text": "Не забудь про RTK Query", "createdAt": "2026-03-20" },
+        {
+            "author": {
+                "avatar": "https://i.pravatar.cc/150?u=29261506-6dba-435d-b558-6b087a96469f",
+                "id": "9965804d-a180-4c30-a3dd-fb2fa4e82c14",
+                "name": "Ольга Попов"
+            },
+            "id": "c36230f8-e3d0-4787-9142-ab59854ecfa8",
+            "reply_to": null,
+            "text": "This is really interesting! I've been researching this for a while.",
+            "timestamp": "2026-03-08T03:00:52.774159Z"
+        },
+        {
+            "author": {
+                "avatar": "https://i.pravatar.cc/150?u=71282384-469d-49c2-9b52-23113336df35",
+                "id": "b28327d0-ce56-4e2a-8a76-6e2ddbbecc67",
+                "name": "Александр Miller"
+            },
+            "id": "7739fc04-9eb2-4aa6-b089-ebc1e489b5cd",
+            "reply_to": null,
+            "text": "Could you elaborate more on the second point? I'm a bit confused.",
+            "timestamp": "2026-03-14T11:23:17.774263Z"
+        },
+        {
+            "author": {
+                "avatar": "https://i.pravatar.cc/150?u=98ec2937-0a9f-4f69-8db4-1bf3c8d79eca",
+                "id": "a1f6f689-6551-4b28-a2aa-784c11ead5f1",
+                "name": "Мария Иванов"
+            },
+            "id": "8f2a1c3d-5e6b-4a7c-9d8e-1f2a3b4c5d6e",
+            "reply_to": null,
+            "text": "Thanks for sharing! Bookmarking this for later reference.",
+            "timestamp": "2026-03-01T18:45:33.774270Z"
+        },
+        {
+            "author": {
+                "avatar": "https://i.pravatar.cc/150?u=b8db6e3c-9659-4cdd-b0f2-d0a017857a59",
+                "id": "216f99b3-3ccb-45b3-b520-e0db83994f97",
+                "name": "Jamie Новиков"
+            },
+            "id": "9a3b2c1d-4e5f-6a7b-8c9d-0e1f2a3b4c5d",
+            "reply_to": null,
+            "text": "I think we need to consider the broader implications here.",
+            "timestamp": "2026-03-19T07:12:08.774276Z"
+        },
+        {
+            "author": {
+                "avatar": "https://i.pravatar.cc/150?u=5fc181d4-b6bd-4ff8-aa89-b6171eff8ada",
+                "id": "38057f46-4627-4ea5-82ca-ec598219084d",
+                "name": "Елена Davis"
+            },
+            "id": "1b2c3d4e-5f6a-7b8c-9d0e-1f2a3b4c5d6e",
+            "reply_to": null,
+            "text": "This reminds me of a similar discussion we had last month.",
+            "timestamp": "2026-03-11T22:38:51.774281Z"
+        },
+        {
+            "author": {
+                "avatar": "https://i.pravatar.cc/150?u=49d22075-59bb-4c4f-834b-6c35d8693d4b",
+                "id": "ebd31142-3746-4418-bad9-ed86a4438d5c",
+                "name": "Alex Морозов"
+            },
+            "id": "1",
+            "reply_to": null,
+            "text": "Honestly, I'm on the fence about this one. Both sides have merit.",
+            "timestamp": "2026-03-05T14:27:44.774286Z"
+        },
+        {
+            "author": {
+                "avatar": "https://i.pravatar.cc/150?u=47a35da0-0d20-404e-9442-7d28a99267d6",
+                "id": "f6a7b183-817f-4bda-b77f-b5158a6c1d36",
+                "name": "Alex Davis"
+            },
+            "id": "1",
+            "reply_to": null,
+            "text": "Just wanted to share my thoughts on this topic. What do you all think?",
+            "timestamp": "2026-03-17T09:55:19.774291Z"
+        },
+        {
+            "author": {
+                "avatar": "https://i.pravatar.cc/150?u=ed33a042-b0d5-427d-a71b-bc217cc70182",
+                "id": "9f713e4c-1a81-4b40-a864-8bc4c71213a9",
+                "name": "Drew Петров"
+            },
+            "id": "1",
+            "reply_to": null,
+            "text": "Great post! This helped me understand the concept much better.",
+            "timestamp": "2026-03-03T20:14:02.774296Z"
+        },
+        {
+            "author": {
+                "avatar": "https://i.pravatar.cc/150?u=82bcb59c-917b-462e-9336-2ab519a5230c",
+                "id": "b34a0585-732e-440f-9347-106c04924824",
+                "name": "Jordan Davis"
+            },
+            "id": "5f6a7b8c-9d0e-1f2a-3b4c-5d6e7f8a9b0c",
+            "reply_to": null,
+            "text": "I disagree with this point because the data suggests otherwise.",
+            "timestamp": "2026-03-12T16:41:37.774301Z"
+        },
+        {
+            "author": {
+                "avatar": "https://i.pravatar.cc/150?u=cd66c2c4-d12e-4ca9-9335-91849e0b0380",
+                "id": "1805471a-f0b7-4d92-bb7d-aeefa500fbd0",
+                "name": "Alex Смирнов"
+            },
+            "id": "6a7b8c9d-0e1f-2a3b-4c5d-6e7f8a9b0c1d",
+            "reply_to": null,
+            "text": "Has anyone else experienced something similar? Would love to hear your stories.",
+            "timestamp": "2026-03-09T05:33:28.774306Z"
+        }
+    ],
+    "thread-titles": [
+        {
+            "id": 1,
+            "title": "Как выучить React в 2026?",
+            "author": "mike",
+            "created_at": "2026-03-20",
+            "messages_count": 5
+        },
+        {
+            "id": 2,
+            "title": "Лучший способ изучить RTK Query",
+            "author": "alex",
+            "created_at": "2026-03-19",
+            "messages_count": 4
+        },
+        {
+            "id": 3,
+            "title": "Tailwind vs SCSS — что лучше?",
+            "author": "john",
+            "created_at": "2026-03-18",
+            "messages_count": 6
+        },
+        {
+            "id": 4,
+            "title": "Стоит ли учить Redux в 2026?",
+            "author": "sara",
+            "created_at": "2026-03-18",
+            "messages_count": 3
+        },
+        {
+            "id": 5,
+            "title": "Лучшие UI библиотеки для React",
+            "author": "tom",
+            "created_at": "2026-03-17",
+            "messages_count": 4
+        },
+        {
+            "id": 6,
+            "title": "FSD архитектура — переоценена?",
+            "author": "mike",
+            "created_at": "2026-03-16",
+            "messages_count": 5
+        },
+        {
+            "id": 7,
+            "title": "Как подготовиться к собесу по фронтенду",
+            "author": "anna",
+            "created_at": "2026-03-15",
+            "messages_count": 7
+        },
+        {
+            "id": 8,
+            "title": "TypeScript — обязателен или нет?",
+            "author": "alex",
+            "created_at": "2026-03-14",
+            "messages_count": 4
+        }
+    ],
+    "threads": [
+        {
+            "id": "1",
+            "title": "Общий чат разработки",
+            "messages_count": 2,
+            "messages": [
+                {
+                    "id": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h",
+                    "author": {
+                        "id": "u101-4444-5555",
+                        "name": "Алексей Иванов",
+                        "avatar": "https://example.com/avatars/alex.jpg"
+                    },
+                    "text": "Привет всем! Кто-нибудь смотрел новый билд?",
+                    "timestamp": "2026-03-21T10:30:00.000Z",
+                    "reply_to": null
+                },
+                {
+                    "id": "9a8b7c6d-5e4f-3g2h-1i0j-k9l8m7n6o5p4",
+                    "author": {
+                        "id": "u102-6666-7777",
+                        "name": "Мария Смирнова",
+                        "avatar": "https://example.com/avatars/maria.jpg"
+                    },
+                    "text": "Да, я проверила. Вроде всё стабильно.",
+                    "timestamp": "2026-03-21T10:35:15.123Z",
+                    "reply_to": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "title": "Баг-репорты (Mobile)",
+            "messages_count": 1,
+            "messages": [
+                {
+                    "id": "e4e4e4e4-d3d3-c2c2-b1b1-a0a0a0a0a0a0",
+                    "author": {
+                        "id": "u205-1111-2222",
+                        "name": "QA Lead",
+                        "avatar": "https://example.com/avatars/qa.png"
+                    },
+                    "text": "Нашел критическую ошибку в логике авторизации на Android.",
+                    "timestamp": "2026-03-21T14:20:00.000Z",
+                    "reply_to": null
+                }, {
+                    "id": "e4e4e4e4-d3d3-c2c2-b1b1-a0a0a0a0a0a0",
+                    "author": {
+                        "id": "u205-1111-2222",
+                        "name": "QA Lead",
+                        "avatar": "https://example.com/avatars/qa.png"
+                    },
+                    "text": "Нашел критическую ошибку в логике авторизации на Android.",
+                    "timestamp": "2026-03-21T14:20:00.000Z",
+                    "reply_to": null
+                }, {
+                    "id": "e4e4e4e4-d3d3-c2c2-b1b1-a0a0a0a0a0a0",
+                    "author": {
+                        "id": "u205-1111-2222",
+                        "name": "QA Lead",
+                        "avatar": "https://example.com/avatars/qa.png"
+                    },
+                    "text": "Нашел критическую ошибку в логике авторизации на Android.",
+                    "timestamp": "2026-03-21T14:20:00.000Z",
+                    "reply_to": null
+                }, {
+                    "id": "e4e4e4e4-d3d3-c2c2-b1b1-a0a0a0a0a0a0",
+                    "author": {
+                        "id": "u205-1111-2222",
+                        "name": "QA Lead",
+                        "avatar": "https://example.com/avatars/qa.png"
+                    },
+                    "text": "Нашел критическую ошибку в логике авторизации на Android.",
+                    "timestamp": "2026-03-21T14:20:00.000Z",
+                    "reply_to": null
+                }, {
+                    "id": "e4e4e4e4-d3d3-c2c2-b1b1-a0a0a0a0a0a0",
+                    "author": {
+                        "id": "u205-1111-2222",
+                        "name": "QA Lead",
+                        "avatar": "https://example.com/avatars/qa.png"
+                    },
+                    "text": "Нашел критическую ошибку в логике авторизации на Android.",
+                    "timestamp": "2026-03-21T14:20:00.000Z",
+                    "reply_to": null
+                }, {
+                    "id": "e4e4e4e4-d3d3-c2c2-b1b1-a0a0a0a0a0a0",
+                    "author": {
+                        "id": "u205-1111-2222",
+                        "name": "QA Lead",
+                        "avatar": "https://example.com/avatars/qa.png"
+                    },
+                    "text": "Нашел критическую ошибку в логике авторизации на Android.",
+                    "timestamp": "2026-03-21T14:20:00.000Z",
+                    "reply_to": null
+                }, {
+                    "id": "e4e4e4e4-d3d3-c2c2-b1b1-a0a0a0a0a0a0",
+                    "author": {
+                        "id": "u205-1111-2222",
+                        "name": "QA Lead",
+                        "avatar": "https://example.com/avatars/qa.png"
+                    },
+                    "text": "Нашел критическую ошибку в логике авторизации на Android.",
+                    "timestamp": "2026-03-21T14:20:00.000Z",
+                    "reply_to": null
+                }, {
+                    "id": "e4e4e4e4-d3d3-c2c2-b1b1-a0a0a0a0a0a0",
+                    "author": {
+                        "id": "u205-1111-2222",
+                        "name": "QA Lead",
+                        "avatar": "https://example.com/avatars/qa.png"
+                    },
+                    "text": "Нашел критическую ошибку в логике авторизации на Android.",
+                    "timestamp": "2026-03-21T14:20:00.000Z",
+                    "reply_to": null
+                }, {
+                    "id": "e4e4e4e4-d3d3-c2c2-b1b1-a0a0a0a0a0a0",
+                    "author": {
+                        "id": "u205-1111-2222",
+                        "name": "QA Lead",
+                        "avatar": "https://example.com/avatars/qa.png"
+                    },
+                    "text": "Нашел критическую ошибку в логике авторизации на Android.",
+                    "timestamp": "2026-03-21T14:20:00.000Z",
+                    "reply_to": null
+                }, {
+                    "id": "e4e4e4e4-d3d3-c2c2-b1b1-a0a0a0a0a0a0",
+                    "author": {
+                        "id": "u205-1111-2222",
+                        "name": "QA Lead",
+                        "avatar": "https://example.com/avatars/qa.png"
+                    },
+                    "text": "Нашел критическую ошибку в логике авторизации на Android.",
+                    "timestamp": "2026-03-21T14:20:00.000Z",
+                    "reply_to": null
+                }, {
+                    "id": "e4e4e4e4-d3d3-c2c2-b1b1-a0a0a0a0a0a0",
+                    "author": {
+                        "id": "u205-1111-2222",
+                        "name": "QA Lead",
+                        "avatar": "https://example.com/avatars/qa.png"
+                    },
+                    "text": "Нашел критическую ошибку в логике авторизации на Android.",
+                    "timestamp": "2026-03-21T14:20:00.000Z",
+                    "reply_to": null
+                }, {
+                    "id": "e4e4e4e4-d3d3-c2c2-b1b1-a0a0a0a0a0a0",
+                    "author": {
+                        "id": "u205-1111-2222",
+                        "name": "QA Lead",
+                        "avatar": "https://example.com/avatars/qa.png"
+                    },
+                    "text": "Нашел критическую ошибку в логике авторизации на Android.",
+                    "timestamp": "2026-03-21T14:20:00.000Z",
+                    "reply_to": null
+                }, {
+                    "id": "e4e4e4e4-d3d3-c2c2-b1b1-a0a0a0a0a0a0",
+                    "author": {
+                        "id": "u205-1111-2222",
+                        "name": "QA Lead",
+                        "avatar": "https://example.com/avatars/qa.png"
+                    },
+                    "text": "Нашел критическую ошибку в логике авторизации на Android.",
+                    "timestamp": "2026-03-21T14:20:00.000Z",
+                    "reply_to": null
+                }, {
+                    "id": "e4e4e4e4-d3d3-c2c2-b1b1-a0a0a0a0a0a0",
+                    "author": {
+                        "id": "u205-1111-2222",
+                        "name": "QA Lead",
+                        "avatar": "https://example.com/avatars/qa.png"
+                    },
+                    "text": "Нашел критическую ошибку в логике авторизации на Android.",
+                    "timestamp": "2026-03-21T14:20:00.000Z",
+                    "reply_to": null
+                }, {
+                    "id": "e4e4e4e4-d3d3-c2c2-b1b1-a0a0a0a0a0a0",
+                    "author": {
+                        "id": "u205-1111-2222",
+                        "name": "QA Lead",
+                        "avatar": "https://example.com/avatars/qa.png"
+                    },
+                    "text": "Нашел критическую ошибку в логике авторизации на Android.",
+                    "timestamp": "2026-03-21T14:20:00.000Z",
+                    "reply_to": null
+                },{
+                    "id": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h",
+                    "author": {
+                        "id": "u101-4444-5555",
+                        "name": "Алексей Иванов",
+                        "avatar": "https://example.com/avatars/alex.jpg"
+                    },
+                    "text": "Привет всем! Кто-нибудь смотрел новый билд?",
+                    "timestamp": "2026-03-21T10:30:00.000Z",
+                    "reply_to": null
+                },
+                {
+                    "id": "9a8b7c6d-5e4f-3g2h-1i0j-k9l8m7n6o5p4",
+                    "author": {
+                        "id": "u102-6666-7777",
+                        "name": "Мария Смирнова",
+                        "avatar": "https://example.com/avatars/maria.jpg"
+                    },
+                    "text": "Да, я проверила. Вроде всё стабильно.",
+                    "timestamp": "2026-03-21T10:35:15.123Z",
+                    "reply_to": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h"
+                },{
+                    "id": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h",
+                    "author": {
+                        "id": "u101-4444-5555",
+                        "name": "Алексей Иванов",
+                        "avatar": "https://example.com/avatars/alex.jpg"
+                    },
+                    "text": "Привет всем! Кто-нибудь смотрел новый билд?",
+                    "timestamp": "2026-03-21T10:30:00.000Z",
+                    "reply_to": null
+                },
+                {
+                    "id": "9a8b7c6d-5e4f-3g2h-1i0j-k9l8m7n6o5p4",
+                    "author": {
+                        "id": "u102-6666-7777",
+                        "name": "Мария Смирнова",
+                        "avatar": "https://example.com/avatars/maria.jpg"
+                    },
+                    "text": "Да, я проверила. Вроде всё стабильно.",
+                    "timestamp": "2026-03-21T10:35:15.123Z",
+                    "reply_to": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h"
+                },{
+                    "id": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h",
+                    "author": {
+                        "id": "u101-4444-5555",
+                        "name": "Алексей Иванов",
+                        "avatar": "https://example.com/avatars/alex.jpg"
+                    },
+                    "text": "Привет всем! Кто-нибудь смотрел новый билд?",
+                    "timestamp": "2026-03-21T10:30:00.000Z",
+                    "reply_to": null
+                },
+                {
+                    "id": "9a8b7c6d-5e4f-3g2h-1i0j-k9l8m7n6o5p4",
+                    "author": {
+                        "id": "u102-6666-7777",
+                        "name": "Мария Смирнова",
+                        "avatar": "https://example.com/avatars/maria.jpg"
+                    },
+                    "text": "Да, я проверила. Вроде всё стабильно.",
+                    "timestamp": "2026-03-21T10:35:15.123Z",
+                    "reply_to": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h"
+                },{
+                    "id": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h",
+                    "author": {
+                        "id": "u101-4444-5555",
+                        "name": "Алексей Иванов",
+                        "avatar": "https://example.com/avatars/alex.jpg"
+                    },
+                    "text": "Привет всем! Кто-нибудь смотрел новый билд?",
+                    "timestamp": "2026-03-21T10:30:00.000Z",
+                    "reply_to": null
+                },
+                {
+                    "id": "9a8b7c6d-5e4f-3g2h-1i0j-k9l8m7n6o5p4",
+                    "author": {
+                        "id": "u102-6666-7777",
+                        "name": "Мария Смирнова",
+                        "avatar": "https://example.com/avatars/maria.jpg"
+                    },
+                    "text": "Да, я проверила. Вроде всё стабильно.",
+                    "timestamp": "2026-03-21T10:35:15.123Z",
+                    "reply_to": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h"
+                },{
+                    "id": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h",
+                    "author": {
+                        "id": "u101-4444-5555",
+                        "name": "Алексей Иванов",
+                        "avatar": "https://example.com/avatars/alex.jpg"
+                    },
+                    "text": "Привет всем! Кто-нибудь смотрел новый билд?",
+                    "timestamp": "2026-03-21T10:30:00.000Z",
+                    "reply_to": null
+                },
+                {
+                    "id": "9a8b7c6d-5e4f-3g2h-1i0j-k9l8m7n6o5p4",
+                    "author": {
+                        "id": "u102-6666-7777",
+                        "name": "Мария Смирнова",
+                        "avatar": "https://example.com/avatars/maria.jpg"
+                    },
+                    "text": "Да, я проверила. Вроде всё стабильно.",
+                    "timestamp": "2026-03-21T10:35:15.123Z",
+                    "reply_to": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h"
+                },{
+                    "id": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h",
+                    "author": {
+                        "id": "u101-4444-5555",
+                        "name": "Алексей Иванов",
+                        "avatar": "https://example.com/avatars/alex.jpg"
+                    },
+                    "text": "Привет всем! Кто-нибудь смотрел новый билд?",
+                    "timestamp": "2026-03-21T10:30:00.000Z",
+                    "reply_to": null
+                },
+                {
+                    "id": "9a8b7c6d-5e4f-3g2h-1i0j-k9l8m7n6o5p4",
+                    "author": {
+                        "id": "u102-6666-7777",
+                        "name": "Мария Смирнова",
+                        "avatar": "https://example.com/avatars/maria.jpg"
+                    },
+                    "text": "Да, я проверила. Вроде всё стабильно.",
+                    "timestamp": "2026-03-21T10:35:15.123Z",
+                    "reply_to": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h"
+                },{
+                    "id": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h",
+                    "author": {
+                        "id": "u101-4444-5555",
+                        "name": "Алексей Иванов",
+                        "avatar": "https://example.com/avatars/alex.jpg"
+                    },
+                    "text": "Привет всем! Кто-нибудь смотрел новый билд?",
+                    "timestamp": "2026-03-21T10:30:00.000Z",
+                    "reply_to": null
+                },
+                {
+                    "id": "9a8b7c6d-5e4f-3g2h-1i0j-k9l8m7n6o5p4",
+                    "author": {
+                        "id": "u102-6666-7777",
+                        "name": "Мария Смирнова",
+                        "avatar": "https://example.com/avatars/maria.jpg"
+                    },
+                    "text": "Да, я проверила. Вроде всё стабильно.",
+                    "timestamp": "2026-03-21T10:35:15.123Z",
+                    "reply_to": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h"
+                },{
+                    "id": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h",
+                    "author": {
+                        "id": "u101-4444-5555",
+                        "name": "Алексей Иванов",
+                        "avatar": "https://example.com/avatars/alex.jpg"
+                    },
+                    "text": "Привет всем! Кто-нибудь смотрел новый билд?",
+                    "timestamp": "2026-03-21T10:30:00.000Z",
+                    "reply_to": null
+                },
+                {
+                    "id": "9a8b7c6d-5e4f-3g2h-1i0j-k9l8m7n6o5p4",
+                    "author": {
+                        "id": "u102-6666-7777",
+                        "name": "Мария Смирнова",
+                        "avatar": "https://example.com/avatars/maria.jpg"
+                    },
+                    "text": "Да, я проверила. Вроде всё стабильно.",
+                    "timestamp": "2026-03-21T10:35:15.123Z",
+                    "reply_to": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h"
+                },{
+                    "id": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h",
+                    "author": {
+                        "id": "u101-4444-5555",
+                        "name": "Алексей Иванов",
+                        "avatar": "https://example.com/avatars/alex.jpg"
+                    },
+                    "text": "Привет всем! Кто-нибудь смотрел новый билд?",
+                    "timestamp": "2026-03-21T10:30:00.000Z",
+                    "reply_to": null
+                },
+                {
+                    "id": "9a8b7c6d-5e4f-3g2h-1i0j-k9l8m7n6o5p4",
+                    "author": {
+                        "id": "u102-6666-7777",
+                        "name": "Мария Смирнова",
+                        "avatar": "https://example.com/avatars/maria.jpg"
+                    },
+                    "text": "Да, я проверила. Вроде всё стабильно.",
+                    "timestamp": "2026-03-21T10:35:15.123Z",
+                    "reply_to": "7b2d114c-1b7e-4f5e-8d2a-3c5b6e7f8g9h"
+                }
 
-        { "id": 6, "threadId": 2, "author": "mike", "text": "RTK Query имба", "createdAt": "2026-03-19" },
-        { "id": 7, "threadId": 2, "author": "alex", "text": "Особенно с FSD", "createdAt": "2026-03-19" },
-        { "id": 8, "threadId": 2, "author": "anna", "text": "И кэширование автоматическое", "createdAt": "2026-03-19" },
-        { "id": 9, "threadId": 2, "author": "john", "text": "И мутации удобные", "createdAt": "2026-03-19" },
-
-        { "id": 10, "threadId": 3, "author": "alex", "text": "Tailwind быстрее", "createdAt": "2026-03-18" },
-        { "id": 11, "threadId": 3, "author": "john", "text": "SCSS структурированнее", "createdAt": "2026-03-18" },
-        { "id": 12, "threadId": 3, "author": "sara", "text": "Tailwind + clsx идеальный вариант", "createdAt": "2026-03-18" },
-        { "id": 13, "threadId": 3, "author": "tom", "text": "Я за Tailwind", "createdAt": "2026-03-18" },
-        { "id": 14, "threadId": 3, "author": "mike", "text": "Tailwind удобнее для MVP", "createdAt": "2026-03-18" },
-        { "id": 15, "threadId": 3, "author": "anna", "text": "SCSS лучше для больших проектов", "createdAt": "2026-03-18" },
-
-        { "id": 16, "threadId": 4, "author": "alex", "text": "Redux нужен если большой проект", "createdAt": "2026-03-18" },
-        { "id": 17, "threadId": 4, "author": "john", "text": "RTK решает", "createdAt": "2026-03-18" },
-        { "id": 18, "threadId": 4, "author": "sara", "text": "Без Redux тоже можно жить", "createdAt": "2026-03-18" },
-
-        { "id": 19, "threadId": 5, "author": "mike", "text": "MUI", "createdAt": "2026-03-17" },
-        { "id": 20, "threadId": 5, "author": "alex", "text": "Shadcn", "createdAt": "2026-03-17" },
-        { "id": 21, "threadId": 5, "author": "john", "text": "Chakra UI", "createdAt": "2026-03-17" },
-        { "id": 22, "threadId": 5, "author": "anna", "text": "Ant Design", "createdAt": "2026-03-17" },
-
-        { "id": 23, "threadId": 6, "author": "alex", "text": "FSD топ", "createdAt": "2026-03-16" },
-        { "id": 24, "threadId": 6, "author": "john", "text": "Сложная для маленьких проектов", "createdAt": "2026-03-16" },
-        { "id": 25, "threadId": 6, "author": "sara", "text": "Но масштабируется отлично", "createdAt": "2026-03-16" },
-        { "id": 26, "threadId": 6, "author": "mike", "text": "Согласен", "createdAt": "2026-03-16" },
-        { "id": 27, "threadId": 6, "author": "tom", "text": "Главное правильно слои разделить", "createdAt": "2026-03-16" },
-
-        { "id": 28, "threadId": 7, "author": "alex", "text": "Алгоритмы учи", "createdAt": "2026-03-15" },
-        { "id": 29, "threadId": 7, "author": "john", "text": "React вопросы", "createdAt": "2026-03-15" },
-        { "id": 30, "threadId": 7, "author": "anna", "text": "System design базовый", "createdAt": "2026-03-15" },
-        { "id": 31, "threadId": 7, "author": "mike", "text": "И pet-project", "createdAt": "2026-03-15" },
-        { "id": 32, "threadId": 7, "author": "tom", "text": "И TypeScript", "createdAt": "2026-03-15" },
-        { "id": 33, "threadId": 7, "author": "sara", "text": "И RTK Query", "createdAt": "2026-03-15" },
-        { "id": 34, "threadId": 7, "author": "alex", "text": "И будет оффер", "createdAt": "2026-03-15" },
-
-        { "id": 35, "threadId": 8, "author": "john", "text": "Обязателен", "createdAt": "2026-03-14" },
-        { "id": 36, "threadId": 8, "author": "alex", "text": "Без него уже никуда", "createdAt": "2026-03-14" },
-        { "id": 37, "threadId": 8, "author": "anna", "text": "Типы спасают", "createdAt": "2026-03-14" },
-        { "id": 38, "threadId": 8, "author": "mike", "text": "Особенно в больших проектах", "createdAt": "2026-03-14" }
+            ]
+        },
+        {
+            "id": "3",
+            "title": "Предложения по дизайну",
+            "messages_count": 0,
+            "messages": []
+        },
+        {
+            "id": "4",
+            "title": "Флудилка",
+            "messages_count": 1,
+            "messages": [
+                {
+                    "id": "f5f5f5f5-e4e4-d3d3-c2c2-b1b1b1b1b1b1",
+                    "author": {
+                        "id": "u301-8888-9999",
+                        "name": "Дмитрий К.",
+                        "avatar": "https://example.com/avatars/dima.jpg"
+                    },
+                    "text": "Кто пойдет обедать через 10 минут?",
+                    "timestamp": "2026-03-21T12:00:00.000Z",
+                    "reply_to": null
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "title": "Архив 2025",
+            "messages_count": 0,
+            "messages": []
+        },
+        {
+            "id": "6",
+            "title": "Поддержка клиентов",
+            "messages_count": 2,
+            "messages": [
+                {
+                    "id": "c7c7c7c7-b6b6-a5a5-9494-838383838383",
+                    "author": {
+                        "id": "u404-0000-1111",
+                        "name": "Клиент #99",
+                        "avatar": "https://example.com/avatars/default.png"
+                    },
+                    "text": "Не могу зайти в личный кабинет.",
+                    "timestamp": "2026-03-21T16:45:00.555Z",
+                    "reply_to": null
+                },
+                {
+                    "id": "d8d8d8d8-c7c7-b6b6-a5a5-949494949494",
+                    "author": {
+                        "id": "u001-admin-001",
+                        "name": "Support Bot",
+                        "avatar": "https://example.com/avatars/bot.png"
+                    },
+                    "text": "Пожалуйста, попробуйте сбросить пароль.",
+                    "timestamp": "2026-03-21T16:45:30.000Z",
+                    "reply_to": "c7c7c7c7-b6b6-a5a5-9494-838383838383"
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "title": "Маркетинг (Сентябрь)",
+            "messages_count": 0,
+            "messages": []
+        },
+        {
+            "id": "8",
+            "title": "Важное",
+            "messages_count": 1,
+            "messages": [
+                {
+                    "id": "12345678-1234-1234-1234-123456789012",
+                    "author": {
+                        "id": "u777-boss-777",
+                        "name": "CEO",
+                        "avatar": "https://example.com/avatars/ceo.jpg"
+                    },
+                    "text": "В понедельник в 10:00 общий сбор в Zoom.",
+                    "timestamp": "2026-03-21T18:00:00.000Z",
+                    "reply_to": null
+                }
+            ]
+        }
     ]
 }
