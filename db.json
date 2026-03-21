@@ -1,0 +1,59 @@
+{
+    "threads": [
+        { "id": 1, "title": "Как выучить React в 2026?", "author": "mike", "createdAt": "2026-03-20", "postsCount": 5 },
+        { "id": 2, "title": "Лучший способ изучить RTK Query", "author": "alex", "createdAt": "2026-03-19", "postsCount": 4 },
+        { "id": 3, "title": "Tailwind vs SCSS — что лучше?", "author": "john", "createdAt": "2026-03-18", "postsCount": 6 },
+        { "id": 4, "title": "Стоит ли учить Redux в 2026?", "author": "sara", "createdAt": "2026-03-18", "postsCount": 3 },
+        { "id": 5, "title": "Лучшие UI библиотеки для React", "author": "tom", "createdAt": "2026-03-17", "postsCount": 4 },
+        { "id": 6, "title": "FSD архитектура — переоценена?", "author": "mike", "createdAt": "2026-03-16", "postsCount": 5 },
+        { "id": 7, "title": "Как подготовиться к собесу по фронтенду", "author": "anna", "createdAt": "2026-03-15", "postsCount": 7 },
+        { "id": 8, "title": "TypeScript — обязателен или нет?", "author": "alex", "createdAt": "2026-03-14", "postsCount": 4 }
+    ],
+    "posts": [
+        { "id": 1, "threadId": 1, "author": "alex", "text": "Делай проекты — это лучший способ", "createdAt": "2026-03-20" },
+        { "id": 2, "threadId": 1, "author": "john", "text": "Согласен, теория бесполезна без практики", "createdAt": "2026-03-20" },
+        { "id": 3, "threadId": 1, "author": "sara", "text": "Попробуй сделать клон Reddit", "createdAt": "2026-03-20" },
+        { "id": 4, "threadId": 1, "author": "mike", "text": "Вот как раз делаю", "createdAt": "2026-03-20" },
+        { "id": 5, "threadId": 1, "author": "tom", "text": "Не забудь про RTK Query", "createdAt": "2026-03-20" },
+
+        { "id": 6, "threadId": 2, "author": "mike", "text": "RTK Query имба", "createdAt": "2026-03-19" },
+        { "id": 7, "threadId": 2, "author": "alex", "text": "Особенно с FSD", "createdAt": "2026-03-19" },
+        { "id": 8, "threadId": 2, "author": "anna", "text": "И кэширование автоматическое", "createdAt": "2026-03-19" },
+        { "id": 9, "threadId": 2, "author": "john", "text": "И мутации удобные", "createdAt": "2026-03-19" },
+
+        { "id": 10, "threadId": 3, "author": "alex", "text": "Tailwind быстрее", "createdAt": "2026-03-18" },
+        { "id": 11, "threadId": 3, "author": "john", "text": "SCSS структурированнее", "createdAt": "2026-03-18" },
+        { "id": 12, "threadId": 3, "author": "sara", "text": "Tailwind + clsx идеальный вариант", "createdAt": "2026-03-18" },
+        { "id": 13, "threadId": 3, "author": "tom", "text": "Я за Tailwind", "createdAt": "2026-03-18" },
+        { "id": 14, "threadId": 3, "author": "mike", "text": "Tailwind удобнее для MVP", "createdAt": "2026-03-18" },
+        { "id": 15, "threadId": 3, "author": "anna", "text": "SCSS лучше для больших проектов", "createdAt": "2026-03-18" },
+
+        { "id": 16, "threadId": 4, "author": "alex", "text": "Redux нужен если большой проект", "createdAt": "2026-03-18" },
+        { "id": 17, "threadId": 4, "author": "john", "text": "RTK решает", "createdAt": "2026-03-18" },
+        { "id": 18, "threadId": 4, "author": "sara", "text": "Без Redux тоже можно жить", "createdAt": "2026-03-18" },
+
+        { "id": 19, "threadId": 5, "author": "mike", "text": "MUI", "createdAt": "2026-03-17" },
+        { "id": 20, "threadId": 5, "author": "alex", "text": "Shadcn", "createdAt": "2026-03-17" },
+        { "id": 21, "threadId": 5, "author": "john", "text": "Chakra UI", "createdAt": "2026-03-17" },
+        { "id": 22, "threadId": 5, "author": "anna", "text": "Ant Design", "createdAt": "2026-03-17" },
+
+        { "id": 23, "threadId": 6, "author": "alex", "text": "FSD топ", "createdAt": "2026-03-16" },
+        { "id": 24, "threadId": 6, "author": "john", "text": "Сложная для маленьких проектов", "createdAt": "2026-03-16" },
+        { "id": 25, "threadId": 6, "author": "sara", "text": "Но масштабируется отлично", "createdAt": "2026-03-16" },
+        { "id": 26, "threadId": 6, "author": "mike", "text": "Согласен", "createdAt": "2026-03-16" },
+        { "id": 27, "threadId": 6, "author": "tom", "text": "Главное правильно слои разделить", "createdAt": "2026-03-16" },
+
+        { "id": 28, "threadId": 7, "author": "alex", "text": "Алгоритмы учи", "createdAt": "2026-03-15" },
+        { "id": 29, "threadId": 7, "author": "john", "text": "React вопросы", "createdAt": "2026-03-15" },
+        { "id": 30, "threadId": 7, "author": "anna", "text": "System design базовый", "createdAt": "2026-03-15" },
+        { "id": 31, "threadId": 7, "author": "mike", "text": "И pet-project", "createdAt": "2026-03-15" },
+        { "id": 32, "threadId": 7, "author": "tom", "text": "И TypeScript", "createdAt": "2026-03-15" },
+        { "id": 33, "threadId": 7, "author": "sara", "text": "И RTK Query", "createdAt": "2026-03-15" },
+        { "id": 34, "threadId": 7, "author": "alex", "text": "И будет оффер", "createdAt": "2026-03-15" },
+
+        { "id": 35, "threadId": 8, "author": "john", "text": "Обязателен", "createdAt": "2026-03-14" },
+        { "id": 36, "threadId": 8, "author": "alex", "text": "Без него уже никуда", "createdAt": "2026-03-14" },
+        { "id": 37, "threadId": 8, "author": "anna", "text": "Типы спасают", "createdAt": "2026-03-14" },
+        { "id": 38, "threadId": 8, "author": "mike", "text": "Особенно в больших проектах", "createdAt": "2026-03-14" }
+    ]
+}
