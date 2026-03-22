@@ -5,7 +5,7 @@ export const threadMap = (dto: ThreadDTO): Thread => {
         id: dto.id,
         title: dto.title,
         author: dto.author,
-        createdAt: dto.created_at,
+        createdAt: dto.timestamp,
         postsCount: Number(dto.messages_count),
         avatar: dto.avatar,
     }

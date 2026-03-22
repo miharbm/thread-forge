@@ -3,7 +3,7 @@ export interface ThreadDTO {
     title: string;
     author: string;
     messages_count: string;
-    created_at: string;
+    timestamp: string;
     avatar: string;
 }
 

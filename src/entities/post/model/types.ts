@@ -1,7 +1,7 @@
 export interface AuthorDto {
     id: string;
     name: string;
-    avatar: string;
+    avatar?: string;
 }
 
 export interface PostDto {
