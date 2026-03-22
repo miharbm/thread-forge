@@ -1,5 +1,5 @@
 import { useGetPostsByThreadQuery } from "@/entities/post/api/postApi.ts";
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {ArrowLeft, Send} from "lucide-react";
 import {PostCard} from "@/entities/post/ui/PostCard.tsx";
 import {PostCardSkeleton} from "@/entities/post/ui/PostCardSkeleton.tsx";
@@ -71,19 +71,34 @@ export const ThreadMessages = ({ id }: ThreadMessagesProps) => {
             {/* FAB (Кнопка ответа) */}
             {/* Используем absolute вместо sticky. Так как главный родитель имеет relative, кнопка всегда будет в правом нижнем углу экрана */}
             <div className="absolute bottom-6 md:bottom-30 right-7 z-50">
-                <Link
-                    to={`/thread/${id}/reply`}
+                {/*<Link*/}
+                {/*    to={`t.me`}*/}
+                {/*    aria-label="Ответить в обсуждение"*/}
+                {/*    className="flex items-center gap-2*/}
+                {/*bg-orange-500/90 hover:bg-orange-500*/}
+                {/*backdrop-blur-sm*/}
+                {/*text-white font-semibold*/}
+                {/*p-4*/}
+                {/*rounded-2xl shadow-xl shadow-orange-200*/}
+                {/*transition-all duration-200 active:scale-95"*/}
+                {/*>*/}
+                {/*    <Send size={24} />*/}
+                {/*</Link>*/}
+                <a
+                    href="https://t.me/username"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="Ответить в обсуждение"
                     className="flex items-center gap-2
-                bg-orange-500/90 hover:bg-orange-500
-                backdrop-blur-sm
-                text-white font-semibold
-                p-4
-                rounded-2xl shadow-xl shadow-orange-200
-                transition-all duration-200 active:scale-95"
+        bg-orange-500/90 hover:bg-orange-500
+        backdrop-blur-sm
+        text-white font-semibold
+        p-4
+        rounded-2xl shadow-xl shadow-orange-200
+        transition-all duration-200 active:scale-95"
                 >
                     <Send size={24} />
-                </Link>
+                </a>
             </div>
 
         </div>
