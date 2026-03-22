@@ -6,7 +6,7 @@ import {PostCardSkeleton} from "@/entities/post/ui/PostCardSkeleton.tsx";
 import {PostCardNoData} from "@/entities/post/ui/PostCardNoData.tsx";
 
 interface ThreadMessagesProps {
-    id: number;
+    id: string;
 }
 
 export const ThreadMessages = ({ id }: ThreadMessagesProps) => {

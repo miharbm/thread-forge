@@ -1,0 +1,202 @@
+{
+    "thread-titles": [
+        {
+            "id": "e3fe1a68-e47a-45fd-b0da-1cd578bb1fb7",
+            "title": "Кто-нибудь знает, почему падает airflow?",
+            "author": "Влад Петров",
+            "created_at": "2026-03-15",
+            "messages_count": 7
+        },
+        {
+            "id": "90c66584-9e2f-4b26-a28f-5c3e2505a982",
+            "title": "Всем привет! Кто может посмотреть PR #142?",
+            "author": "Катя Соколова",
+            "created_at": "2026-03-15",
+            "messages_count": 4
+        },
+        {
+            "id": "27895b54-dd46-4af7-856b-70db8a638fbb",
+            "title": "Когда дедлайн по квартальному отчёту?",
+            "author": "Анна Белова",
+            "created_at": "2026-03-15",
+            "messages_count": 3
+        }
+    ],
+    "threads": [
+        {
+            "id": "e3fe1a68-e47a-45fd-b0da-1cd578bb1fb7",
+            "title": "Кто-нибудь знает, почему падает airflow?",
+            "messages_count": 7,
+            "messages": [
+                {
+                    "id": "fe6d35c4-41ad-509e-bd1e-0bc72974e94e",
+                    "author": {
+                        "id": "u001-vlad-0001",
+                        "name": "Влад Петров",
+                        "avatar": "https://example.com/avatars/vlad.jpg"
+                    },
+                    "text": "Кто-нибудь знает, почему падает airflow?",
+                    "timestamp": "2026-03-15T09:00:15.000Z",
+                    "reply_to": null
+                },
+                {
+                    "id": "9261f6ed-0db9-59a5-8f63-38a833f4c584",
+                    "author": {
+                        "id": "u003-max-0003",
+                        "name": "Макс Орлов",
+                        "avatar": "https://example.com/avatars/max.jpg"
+                    },
+                    "text": "Посмотри логи scheduler",
+                    "timestamp": "2026-03-15T09:01:30.000Z",
+                    "reply_to": "fe6d35c4-41ad-509e-bd1e-0bc72974e94e"
+                },
+                {
+                    "id": "70796ee0-ac80-579f-9483-bdb36992b716",
+                    "author": {
+                        "id": "u001-vlad-0001",
+                        "name": "Влад Петров",
+                        "avatar": "https://example.com/avatars/vlad.jpg"
+                    },
+                    "text": "@max логи смотрел, там OOM killer",
+                    "timestamp": "2026-03-15T09:03:00.000Z",
+                    "reply_to": "9261f6ed-0db9-59a5-8f63-38a833f4c584"
+                },
+                {
+                    "id": "f98b02a6-a697-55ee-9ad4-2c16e809b44a",
+                    "author": {
+                        "id": "u003-max-0003",
+                        "name": "Макс Орлов",
+                        "avatar": "https://example.com/avatars/max.jpg"
+                    },
+                    "text": "OOM — увеличь memory limit в DAG. Вот пример:",
+                    "timestamp": "2026-03-15T09:05:45.000Z",
+                    "reply_to": "70796ee0-ac80-579f-9483-bdb36992b716"
+                },
+                {
+                    "id": "3ecfe114-c64c-5357-a6a7-a8a38c155647",
+                    "author": {
+                        "id": "u001-vlad-0001",
+                        "name": "Влад Петров",
+                        "avatar": "https://example.com/avatars/vlad.jpg"
+                    },
+                    "text": "Спасибо @max, поправил memory_limit, пересобираю",
+                    "timestamp": "2026-03-15T09:08:00.000Z",
+                    "reply_to": "f98b02a6-a697-55ee-9ad4-2c16e809b44a"
+                },
+                {
+                    "id": "8dd27b92-2b0b-53c4-9afa-542321e0e060",
+                    "author": {
+                        "id": "u003-max-0003",
+                        "name": "Макс Орлов",
+                        "avatar": "https://example.com/avatars/max.jpg"
+                    },
+                    "text": "airflow поднялся? всё ок?",
+                    "timestamp": "2026-03-15T09:10:00.000Z",
+                    "reply_to": "3ecfe114-c64c-5357-a6a7-a8a38c155647"
+                },
+                {
+                    "id": "66b31c29-8387-5fe4-aa02-b08df658cca3",
+                    "author": {
+                        "id": "u001-vlad-0001",
+                        "name": "Влад Петров",
+                        "avatar": "https://example.com/avatars/vlad.jpg"
+                    },
+                    "text": "Да, поднялся, DAG запустился успешно",
+                    "timestamp": "2026-03-15T09:11:00.000Z",
+                    "reply_to": "8dd27b92-2b0b-53c4-9afa-542321e0e060"
+                }
+            ]
+        },
+        {
+            "id": "90c66584-9e2f-4b26-a28f-5c3e2505a982",
+            "title": "Всем привет! Кто может посмотреть PR #142?",
+            "messages_count": 4,
+            "messages": [
+                {
+                    "id": "b819b477-1f33-579d-bc91-63058afd818a",
+                    "author": {
+                        "id": "u002-kate-0002",
+                        "name": "Катя Соколова",
+                        "avatar": "https://example.com/avatars/kate.jpg"
+                    },
+                    "text": "Всем привет! Кто может посмотреть PR #142?",
+                    "timestamp": "2026-03-15T09:01:00.000Z",
+                    "reply_to": null
+                },
+                {
+                    "id": "d4456a43-0126-584e-88ed-4a9de40854c5",
+                    "author": {
+                        "id": "u004-oleg-0004",
+                        "name": "Олег Зайцев",
+                        "avatar": "https://example.com/avatars/oleg.jpg"
+                    },
+                    "text": "@kate скину комментарии через час",
+                    "timestamp": "2026-03-15T09:02:10.000Z",
+                    "reply_to": null
+                },
+                {
+                    "id": "e415486e-43c0-5caa-9847-e4a6a911e06c",
+                    "author": {
+                        "id": "u004-oleg-0004",
+                        "name": "Олег Зайцев",
+                        "avatar": "https://example.com/avatars/oleg.jpg"
+                    },
+                    "text": "PR #142 посмотрел — нужно добавить тесты на edge case",
+                    "timestamp": "2026-03-15T09:07:00.000Z",
+                    "reply_to": "b819b477-1f33-579d-bc91-63058afd818a"
+                },
+                {
+                    "id": "ffb0a44f-d0e5-5bef-ab4b-4c9337ff59e6",
+                    "author": {
+                        "id": "u002-kate-0002",
+                        "name": "Катя Соколова",
+                        "avatar": "https://example.com/avatars/kate.jpg"
+                    },
+                    "text": "@oleg хорошо, добавлю тесты и попрошу ещё один review",
+                    "timestamp": "2026-03-15T09:09:00.000Z",
+                    "reply_to": "e415486e-43c0-5caa-9847-e4a6a911e06c"
+                }
+            ]
+        },
+        {
+            "id": "27895b54-dd46-4af7-856b-70db8a638fbb",
+            "title": "Когда дедлайн по квартальному отчёту?",
+            "messages_count": 3,
+            "messages": [
+                {
+                    "id": "6ae42a7a-87a3-583c-b8c5-6568731b3d3f",
+                    "author": {
+                        "id": "u005-anna-0005",
+                        "name": "Анна Белова",
+                        "avatar": "https://example.com/avatars/anna.jpg"
+                    },
+                    "text": "Когда дедлайн по квартальному отчёту?",
+                    "timestamp": "2026-03-15T09:05:00.000Z",
+                    "reply_to": null
+                },
+                {
+                    "id": "cc5fb932-bab8-55d4-be16-d4b4429fdd5e",
+                    "author": {
+                        "id": "u002-kate-0002",
+                        "name": "Катя Соколова",
+                        "avatar": "https://example.com/avatars/kate.jpg"
+                    },
+                    "text": "@anna дедлайн 20 марта, смотри confluence",
+                    "timestamp": "2026-03-15T09:06:00.000Z",
+                    "reply_to": null
+                },
+                {
+                    "id": "43a8d378-594a-5b92-8d1b-f5d31361cc6b",
+                    "author": {
+                        "id": "u005-anna-0005",
+                        "name": "Анна Белова",
+                        "avatar": "https://example.com/avatars/anna.jpg"
+                    },
+                    "text": "@kate окей, уже смотрю confluence, нашла дедлайн",
+                    "timestamp": "2026-03-15T09:08:30.000Z",
+                    "reply_to": "cc5fb932-bab8-55d4-be16-d4b4429fdd5e"
+                }
+            ]
+        }
+    ]
+}

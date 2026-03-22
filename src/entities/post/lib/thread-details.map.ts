@@ -8,7 +8,7 @@ export const ThreadMapper = {
         return {
             id: dto.id,
             name: dto.name,
-            avatarUrl: dto.avatar,
+            avatarUrl: dto.avatar || "",
         };
     },
 

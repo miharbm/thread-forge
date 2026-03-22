@@ -4,7 +4,7 @@ import {ThreadMapper} from "@/entities/post/lib/thread-details.map.ts";
 
 export const postApi = baseApi.injectEndpoints({
     endpoints: (builder) => ({
-        getPostsByThread: builder.query<ThreadDetails, number>({
+        getPostsByThread: builder.query<ThreadDetails, string>({
             query: (threadId) => `/threads/${encodeURI(String(threadId))}`,
             transformResponse: (response: ThreadDetailsDto) => ThreadMapper.toThreadDetails(response),
             providesTags: ["Posts"],
