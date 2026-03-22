@@ -2,6 +2,8 @@ import { useGetPostsByThreadQuery } from "@/entities/post/api/postApi.ts";
 import {Link, useNavigate} from "react-router-dom";
 import {ArrowLeft, Send} from "lucide-react";
 import {PostCard} from "@/entities/post/ui/PostCard.tsx";
+import {PostCardSkeleton} from "@/entities/post/ui/PostCardSkeleton.tsx";
+import {PostCardNoData} from "@/entities/post/ui/PostCardNoData.tsx";
 
 interface ThreadMessagesProps {
     id: number;
@@ -11,21 +13,14 @@ export const ThreadMessages = ({ id }: ThreadMessagesProps) => {
     const { data: thread, isLoading } = useGetPostsByThreadQuery(id, { skip: !id });
     const navigate = useNavigate();
 
-    if (isLoading) {
-        return (
-            <div className="flex h-full items-center justify-center text-slate-500">
-                <div className="animate-pulse">Загрузка обсуждения...</div>
-            </div>
-        );
-    }
 
-    if (!thread) {
-        return (
-            <div className="flex h-full items-center justify-center text-slate-500">
-                Тред не найден
-            </div>
-        );
-    }
+    // if (!thread) {
+    //     return (
+    //         <div className="flex h-full items-center justify-center text-slate-500">
+    //             Тред не найден
+    //         </div>
+    //     );
+    // }
 
     const onClickBack = () => {
         navigate(-1)
@@ -41,29 +36,35 @@ export const ThreadMessages = ({ id }: ThreadMessagesProps) => {
                     <button onClick={onClickBack}>
                         <ArrowLeft />
                     </button>
-                    <div>
-                        <h1 className="text-md font-bold text-slate-800 leading-tight">
-                            {thread.title}
-                        </h1>
-                        <p className="text-sm text-slate-500 mt-1">
-                            {thread.messagesCount} {getNoun(thread.messagesCount, 'сообщение', 'сообщения', 'сообщений')}
-                        </p>
-                    </div>
+                    {isLoading && <ThreadHeaderSkeleton/>}
+                    {thread && (
+                        <div>
+                            <h1 className="text-md font-bold text-slate-800 leading-tight">
+                                {thread.title}
+                            </h1>
+                            <p className="text-sm text-slate-500 mt-1">
+                                {thread.messagesCount} {getNoun(thread.messagesCount, 'сообщение', 'сообщения', 'сообщений')}
+                            </p>
+                        </div>
+                    )}
                     <div></div>
                 </div>
             </div>
 
-            {/* Список сообщений */}
-            {/* Убрали лишнюю обертку. Теперь это прямой потомок flex-col, который забирает всё свободное место (flex-1) и скроллится */}
             <div className="flex-1 p-4 pb-22 space-y-4 custom-scrollbar overflow-y-auto">
-                {thread.messages.length > 0 ? (
+                {isLoading && (
+                    <div className="space-y-4">
+                        {Array.from({ length: 5 }).map((_, i) => (
+                            <PostCardSkeleton key={i} />
+                        ))}
+                    </div>
+                )}
+                {thread && thread.messages.length > 0 ? (
                     thread.messages.map((post) => (
                         <PostCard key={post.id} post={post} />
                     ))
                 ) : (
-                    <div className="text-center py-10 text-slate-400 italic">
-                        В этом треде пока нет сообщений. Будьте первым!
-                    </div>
+                    <PostCardNoData/>
                 )}
             </div>
 
@@ -85,6 +86,15 @@ export const ThreadMessages = ({ id }: ThreadMessagesProps) => {
                 </Link>
             </div>
 
+        </div>
+    );
+};
+
+export const ThreadHeaderSkeleton = () => {
+    return (
+        <div className="animate-pulse">
+            <div className="h-4 bg-slate-200 rounded w-2/3 mb-2" />
+            <div className="h-3 bg-slate-100 rounded w-1/3" />
         </div>
     );
 };
